@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransApiMaui.Pages.ListBranchesPage"
+             Title="ListBranchesPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="List Branches"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <ListView x:Name="UserListView" RowHeight="130">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" />
+                            <Label Text="{Binding Address}" />
+                            <Label Text="{Binding PhoneNumber}" />
+                            <Label Text="{Binding Email}" />
+                            <Label Text="{Binding Schedule}" />
+                            <!-- Agrega más controles según las propiedades de UserInfo que desees mostrar -->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>
